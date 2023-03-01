@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4037309A29A8259900DB910E /* ServingRunList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4037309929A8259900DB910E /* ServingRunList.swift */; };
+		409EF4A9298F3EAF0050B99D /* Daily Calorie Tracker.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 409EF4A8298F3EAF0050B99D /* Daily Calorie Tracker.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		409EF4AE298F3EAF0050B99D /* WatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EF4AD298F3EAF0050B99D /* WatchApp.swift */; };
+		409EF4B0298F3EAF0050B99D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EF4AF298F3EAF0050B99D /* ContentView.swift */; };
+		409EF4B2298F3EB00050B99D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409EF4B1298F3EB00050B99D /* Assets.xcassets */; };
+		409EF4B5298F3EB00050B99D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409EF4B4298F3EB00050B99D /* Preview Assets.xcassets */; };
+		40A39ED72990552300A31B8C /* Compactor in Frameworks */ = {isa = PBXBuildFile; productRef = 40A39ED62990552300A31B8C /* Compactor */; };
+		40B0364729901B04002A91B3 /* DcaltUI in Frameworks */ = {isa = PBXBuildFile; productRef = 40B0364629901B04002A91B3 /* DcaltUI */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		409EF4AA298F3EAF0050B99D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 409EF49C298F3EAF0050B99D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 409EF4A7298F3EAF0050B99D;
+			remoteInfo = "Daily-Calorie-Tracker-Watch-App Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		409EF4BB298F3EB00050B99D /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				409EF4A9298F3EAF0050B99D /* Daily Calorie Tracker.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		40098544298F5492008565F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40098545298F54A1008565F3 /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
+		4037309929A8259900DB910E /* ServingRunList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServingRunList.swift; sourceTree = "<group>"; };
+		409EF4A2298F3EAF0050B99D /* Daily Calorie Tracker Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Calorie Tracker Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		409EF4A8298F3EAF0050B99D /* Daily Calorie Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Calorie Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		409EF4AD298F3EAF0050B99D /* WatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchApp.swift; sourceTree = "<group>"; };
+		409EF4AF298F3EAF0050B99D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		409EF4B1298F3EB00050B99D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		409EF4B4298F3EB00050B99D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		409EF4A5298F3EAF0050B99D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40B0364729901B04002A91B3 /* DcaltUI in Frameworks */,
+				40A39ED72990552300A31B8C /* Compactor in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40098541298F544F008565F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		409EF49B298F3EAF0050B99D = {
+			isa = PBXGroup;
+			children = (
+				409EF4AC298F3EAF0050B99D /* Sources */,
+				409EF4A3298F3EAF0050B99D /* Products */,
+				40098541298F544F008565F3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		409EF4A3298F3EAF0050B99D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				409EF4A2298F3EAF0050B99D /* Daily Calorie Tracker Watch.app */,
+				409EF4A8298F3EAF0050B99D /* Daily Calorie Tracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		409EF4AC298F3EAF0050B99D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				409EF4AD298F3EAF0050B99D /* WatchApp.swift */,
+				409EF4AF298F3EAF0050B99D /* ContentView.swift */,
+				4037309929A8259900DB910E /* ServingRunList.swift */,
+				40098545298F54A1008565F3 /* App.entitlements */,
+				409EF4B1298F3EB00050B99D /* Assets.xcassets */,
+				40098544298F5492008565F3 /* Info.plist */,
+				409EF4B3298F3EB00050B99D /* Preview Content */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		409EF4B3298F3EB00050B99D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				409EF4B4298F3EB00050B99D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		409EF4A1298F3EAF0050B99D /* Daily Calorie Tracker Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 409EF4BC298F3EB00050B99D /* Build configuration list for PBXNativeTarget "Daily Calorie Tracker Watch" */;
+			buildPhases = (
+				409EF4A0298F3EAF0050B99D /* Resources */,
+				409EF4BB298F3EB00050B99D /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				409EF4AB298F3EAF0050B99D /* PBXTargetDependency */,
+			);
+			name = "Daily Calorie Tracker Watch";
+			productName = "Daily-Calorie-Tracker-Watch-App";
+			productReference = 409EF4A2298F3EAF0050B99D /* Daily Calorie Tracker Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		409EF4A7298F3EAF0050B99D /* Daily Calorie Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 409EF4B8298F3EB00050B99D /* Build configuration list for PBXNativeTarget "Daily Calorie Tracker" */;
+			buildPhases = (
+				409EF4A4298F3EAF0050B99D /* Sources */,
+				409EF4A5298F3EAF0050B99D /* Frameworks */,
+				409EF4A6298F3EAF0050B99D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Daily Calorie Tracker";
+			packageProductDependencies = (
+				40B0364629901B04002A91B3 /* DcaltUI */,
+				40A39ED62990552300A31B8C /* Compactor */,
+			);
+			productName = "Daily-Calorie-Tracker-Watch-App Watch App";
+			productReference = 409EF4A8298F3EAF0050B99D /* Daily Calorie Tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		409EF49C298F3EAF0050B99D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					409EF4A1298F3EAF0050B99D = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					409EF4A7298F3EAF0050B99D = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 409EF49F298F3EAF0050B99D /* Build configuration list for PBXProject "Daily Calorie Tracker Watch" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 409EF49B298F3EAF0050B99D;
+			packageReferences = (
+				40A39ED52990552300A31B8C /* XCRemoteSwiftPackageReference "SwiftCompactor" */,
+			);
+			productRefGroup = 409EF4A3298F3EAF0050B99D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				409EF4A1298F3EAF0050B99D /* Daily Calorie Tracker Watch */,
+				409EF4A7298F3EAF0050B99D /* Daily Calorie Tracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		409EF4A0298F3EAF0050B99D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		409EF4A6298F3EAF0050B99D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				409EF4B5298F3EB00050B99D /* Preview Assets.xcassets in Resources */,
+				409EF4B2298F3EB00050B99D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		409EF4A4298F3EAF0050B99D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				409EF4B0298F3EAF0050B99D /* ContentView.swift in Sources */,
+				409EF4AE298F3EAF0050B99D /* WatchApp.swift in Sources */,
+				4037309A29A8259900DB910E /* ServingRunList.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		409EF4AB298F3EAF0050B99D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 409EF4A7298F3EAF0050B99D /* Daily Calorie Tracker */;
+			targetProxy = 409EF4AA298F3EAF0050B99D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		409EF4B6298F3EB00050B99D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		409EF4B7298F3EB00050B99D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		409EF4B9298F3EB00050B99D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Sources/App.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "Sources/Preview\\ Content";
+				DEVELOPMENT_TEAM = J735QC5U38;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Daily Calorie Tracker";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openalloc.dcalt.watch;
+				PRODUCT_NAME = "Daily Calorie Tracker";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		409EF4BA298F3EB00050B99D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Sources/App.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "Sources/Preview\\ Content";
+				DEVELOPMENT_TEAM = J735QC5U38;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Daily Calorie Tracker";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openalloc.dcalt.watch;
+				PRODUCT_NAME = "Daily Calorie Tracker";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		409EF4BD298F3EB00050B99D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J735QC5U38;
+				INFOPLIST_KEY_CFBundleDisplayName = "Daily-Calorie-Tracker-Watch-App";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openalloc.dcalt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		409EF4BE298F3EB00050B99D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J735QC5U38;
+				INFOPLIST_KEY_CFBundleDisplayName = "Daily-Calorie-Tracker-Watch-App";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openalloc.dcalt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		409EF49F298F3EAF0050B99D /* Build configuration list for PBXProject "Daily Calorie Tracker Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				409EF4B6298F3EB00050B99D /* Debug */,
+				409EF4B7298F3EB00050B99D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		409EF4B8298F3EB00050B99D /* Build configuration list for PBXNativeTarget "Daily Calorie Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				409EF4B9298F3EB00050B99D /* Debug */,
+				409EF4BA298F3EB00050B99D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		409EF4BC298F3EB00050B99D /* Build configuration list for PBXNativeTarget "Daily Calorie Tracker Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				409EF4BD298F3EB00050B99D /* Debug */,
+				409EF4BE298F3EB00050B99D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		40A39ED52990552300A31B8C /* XCRemoteSwiftPackageReference "SwiftCompactor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/openalloc/SwiftCompactor.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		40A39ED62990552300A31B8C /* Compactor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40A39ED52990552300A31B8C /* XCRemoteSwiftPackageReference "SwiftCompactor" */;
+			productName = Compactor;
+		};
+		40B0364629901B04002A91B3 /* DcaltUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DcaltUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 409EF49C298F3EAF0050B99D /* Project object */;
+}
