@@ -33,13 +33,13 @@ struct Daily_Calorie_Tracker_Watch_App: App {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext,
-                             persistenceManager.container.viewContext)
-                .environmentObject(persistenceManager)
+                             coreDataStack.container.viewContext)
+                .environmentObject(coreDataStack)
         }
         .onChange(of: scenePhase) { _ in
             // save if: (1) app moved to background, and (2) changes are pending
             do {
-                try persistenceManager.container.viewContext.save()
+                try coreDataStack.container.viewContext.save()
             } catch {
                 logger.error("\(#function): \(error.localizedDescription)")
             }
