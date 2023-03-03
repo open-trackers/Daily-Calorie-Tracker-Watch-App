@@ -20,7 +20,7 @@ struct Daily_Calorie_Tracker_Watch_App: App {
 
     // MARK: - Locals
 
-    private let persistenceManager = CoreDataStack(isCloud: true)
+    private let coreDataStack = CoreDataStack(isCloud: true)
 
     private let logger = Logger(
         subsystem: Bundle.main.bundleIdentifier!,

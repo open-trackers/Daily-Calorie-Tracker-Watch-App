@@ -44,7 +44,7 @@ struct ContentView: View {
     // NOTE that this is to access servingRun in Main Store (not Archive Store!)
     @ViewBuilder
     private func servingRunList(_ dayRunUri: URL) -> some View {
-        if let zDayRun = ZDayRun.get(viewContext, forURIRepresentation: dayRunUri),
+        if let zDayRun: ZDayRun = ZDayRun.get(viewContext, forURIRepresentation: dayRunUri),
            let mainStore = manager.getMainStore(viewContext)
         {
             ServingRunList(zDayRun: zDayRun, inStore: mainStore)
