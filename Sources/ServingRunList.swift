@@ -137,18 +137,25 @@ struct ServingRunList: View {
 
     // MARK: - Actions
 
+    // NOTE: 'removes' matching records, where present, from both mainStore and archiveStore.
     private func userRemoveAction(at offsets: IndexSet) {
-        for index in offsets {
-            let zServingRun = servingRuns[index]
-            zServingRun.userRemoved = true
-        }
-
-        // re-total the calories in both stores (may no longer be present in main)
-        if let consumedDay = zDayRun.consumedDay {
-            refreshTotalCalories(consumedDay: consumedDay, inStore: inStore)
-        }
-
         do {
+            for index in offsets {
+                let zServingRun = servingRuns[index]
+
+                guard let servingArchiveID = zServingRun.zServing?.servingArchiveID,
+                      let consumedDay = zServingRun.zDayRun?.consumedDay,
+                      let consumedTime = zServingRun.consumedTime
+                else { continue }
+
+                try ZServingRun.userRemove(viewContext, servingArchiveID: servingArchiveID, consumedDay: consumedDay, consumedTime: consumedTime)
+            }
+
+            // re-total the calories in both stores (may no longer be present in main)
+            if let consumedDay = zDayRun.consumedDay {
+                refreshTotalCalories(consumedDay: consumedDay, inStore: inStore)
+            }
+
             try viewContext.save()
         } catch {
             logger.error("\(#function): \(error.localizedDescription)")
