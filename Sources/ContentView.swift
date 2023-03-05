@@ -24,6 +24,12 @@ struct ContentView: View {
         NavStack(navData: $categoryNavData, destination: destination) {
             CategoryList()
         }
+        .onContinueUserActivity(logCategoryActivityType) {
+            handleLogCategoryUA(viewContext, $0)
+        }
+        .onContinueUserActivity(logServingActivityType) {
+            handleLogServingUA(viewContext, $0)
+        }
     }
 
     // handle routes for watchOS-specific views here
