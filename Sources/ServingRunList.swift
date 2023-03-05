@@ -35,7 +35,7 @@ struct ServingRunList: View {
         self.zDayRun = zDayRun
         self.inStore = inStore
 
-        let predicate = NSPredicate(format: "zDayRun == %@ AND userRemoved != %@", zDayRun, NSNumber(value: true))
+        let predicate = NSPredicate(format: "zDayRun == %@ AND userRemoved == %@", zDayRun, NSNumber(value: false))
         let sortDescriptors = [NSSortDescriptor(keyPath: \ZServingRun.consumedTime, ascending: true)]
         let request = makeRequest(ZServingRun.self,
                                   predicate: predicate,
