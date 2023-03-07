@@ -24,6 +24,7 @@ struct ContentView: View {
         NavStack(navData: $categoryNavData, destination: destination) {
             CategoryList()
         }
+        .task(priority: .utility, taskAction)
         .onContinueUserActivity(logCategoryActivityType) {
             handleLogCategoryUA(viewContext, $0)
         }
@@ -57,6 +58,11 @@ struct ContentView: View {
         } else {
             Text("Serving Run not available.")
         }
+    }
+
+    @Sendable
+    private func taskAction() async {
+        await handleTaskAction(manager)
     }
 }
 
