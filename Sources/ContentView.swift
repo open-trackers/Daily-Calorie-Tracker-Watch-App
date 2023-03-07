@@ -21,7 +21,7 @@ struct ContentView: View {
     @SceneStorage("main-category-nav") private var categoryNavData: Data?
 
     var body: some View {
-        NavStack(navData: $categoryNavData, destination: destination) {
+        DcaltNavStack(navData: $categoryNavData, destination: destination) {
             CategoryList()
         }
         .task(priority: .utility, taskAction)
