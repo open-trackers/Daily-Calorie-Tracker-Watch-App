@@ -25,22 +25,21 @@ import DcaltUI
 struct ServingRunList: View {
     @Environment(\.managedObjectContext) private var viewContext
     @EnvironmentObject private var router: DcaltRouter
+    @EnvironmentObject private var manager: CoreDataStack
 
     // MARK: - Parameters
 
     private var zDayRun: ZDayRun
-    private var inStore: NSPersistentStore
 
-    init(zDayRun: ZDayRun, inStore: NSPersistentStore) {
+    init(zDayRun: ZDayRun, mainStore: NSPersistentStore) {
         self.zDayRun = zDayRun
-        self.inStore = inStore
 
         let predicate = ZServingRun.getPredicate(zDayRun: zDayRun, userRemoved: false)
         let sortDescriptors = ZServingRun.byConsumedTime(ascending: true)
         let request = makeRequest(ZServingRun.self,
                                   predicate: predicate,
                                   sortDescriptors: sortDescriptors,
-                                  inStore: inStore)
+                                  inStore: mainStore)
 
         _servingRuns = FetchRequest<ZServingRun>(fetchRequest: request)
     }
@@ -91,9 +90,6 @@ struct ServingRunList: View {
 
             Text("Total: \(totalCalories) cals")
                 .listItemTint(.accentColor.opacity(0.4))
-        }
-        .navigationTitle {
-            NavTitle("Today")
         }
     }
 
@@ -152,8 +148,10 @@ struct ServingRunList: View {
             }
 
             // re-total the calories in both stores (may no longer be present in main)
-            if let consumedDay = zDayRun.consumedDay {
-                refreshTotalCalories(consumedDay: consumedDay, inStore: inStore)
+            if let consumedDay = zDayRun.consumedDay,
+               let mainStore = manager.getMainStore(viewContext)
+            {
+                refreshTotalCalories(consumedDay: consumedDay, inStore: mainStore)
             }
 
             try viewContext.save()
@@ -209,7 +207,7 @@ struct ServingRunList_Previews: PreviewProvider {
         try? ctx.save()
 
         return NavigationStack {
-            ServingRunList(zDayRun: zdr, inStore: store)
+            ServingRunList(zDayRun: zdr, mainStore: store)
                 .environment(\.managedObjectContext, ctx)
                 .environmentObject(manager)
         }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		402CF94329BBF62D00129305 /* TodayDayRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402CF94229BBF62D00129305 /* TodayDayRun.swift */; };
 		4037309A29A8259900DB910E /* ServingRunList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4037309929A8259900DB910E /* ServingRunList.swift */; };
 		409EF4A9298F3EAF0050B99D /* Daily Calorie Tracker.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 409EF4A8298F3EAF0050B99D /* Daily Calorie Tracker.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		409EF4AE298F3EAF0050B99D /* WatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409EF4AD298F3EAF0050B99D /* WatchApp.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		40098544298F5492008565F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40098545298F54A1008565F3 /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
+		402CF94229BBF62D00129305 /* TodayDayRun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDayRun.swift; sourceTree = "<group>"; };
 		4037309929A8259900DB910E /* ServingRunList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServingRunList.swift; sourceTree = "<group>"; };
 		409EF4A2298F3EAF0050B99D /* Daily Calorie Tracker Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Calorie Tracker Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		409EF4A8298F3EAF0050B99D /* Daily Calorie Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Calorie Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +103,7 @@
 				409EF4AD298F3EAF0050B99D /* WatchApp.swift */,
 				409EF4AF298F3EAF0050B99D /* ContentView.swift */,
 				4037309929A8259900DB910E /* ServingRunList.swift */,
+				402CF94229BBF62D00129305 /* TodayDayRun.swift */,
 				40098545298F54A1008565F3 /* App.entitlements */,
 				409EF4B1298F3EB00050B99D /* Assets.xcassets */,
 				40098544298F5492008565F3 /* Info.plist */,
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				402CF94329BBF62D00129305 /* TodayDayRun.swift in Sources */,
 				409EF4B0298F3EAF0050B99D /* ContentView.swift in Sources */,
 				409EF4AE298F3EAF0050B99D /* WatchApp.swift in Sources */,
 				4037309A29A8259900DB910E /* ServingRunList.swift in Sources */,

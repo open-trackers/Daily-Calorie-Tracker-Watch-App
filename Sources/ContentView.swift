@@ -37,26 +37,14 @@ struct ContentView: View {
     @ViewBuilder
     private func destination(_ router: DcaltRouter, _ route: DcaltRoute) -> some View {
         switch route {
-        case let .dayRunDetail(dayRunURI):
-            servingRunList(dayRunURI)
+        case .dayRunToday:
+            TodayDayRun()
                 .environmentObject(router)
                 .environment(\.managedObjectContext, viewContext)
         default:
             DcaltDestination(route)
                 .environmentObject(router)
                 .environment(\.managedObjectContext, viewContext)
-        }
-    }
-
-    // NOTE that this is to access servingRun in Main Store (not Archive Store!)
-    @ViewBuilder
-    private func servingRunList(_ dayRunUri: URL) -> some View {
-        if let zDayRun: ZDayRun = ZDayRun.get(viewContext, forURIRepresentation: dayRunUri),
-           let mainStore = manager.getMainStore(viewContext)
-        {
-            ServingRunList(zDayRun: zDayRun, inStore: mainStore)
-        } else {
-            Text("Serving Run not available.")
         }
     }
 
