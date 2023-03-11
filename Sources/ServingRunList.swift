@@ -76,7 +76,7 @@ struct ServingRunList: View {
                     VStack(spacing: 15) {
                         Text(servingRun.displayConsumedTime)
                         Text(servingRun.zServing?.wrappedName ?? "unknown")
-                        Text("\(servingRun.calories) cals")
+                        Text("\(servingRun.calories) cal")
                     }
                     .navigationTitle {
                         NavTitle("Summary")
@@ -88,7 +88,7 @@ struct ServingRunList: View {
             .onDelete(perform: userRemoveAction)
             .listItemTint(Color.accentColor.opacity(0.8))
 
-            Text("Total: \(totalCalories) cals")
+            Text("Total: \(totalCalories) cal")
                 .listItemTint(.accentColor.opacity(0.4))
         }
     }
