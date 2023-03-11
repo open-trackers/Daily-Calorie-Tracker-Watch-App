@@ -49,69 +49,46 @@ struct ServingRunList: View {
     private let logger = Logger(subsystem: Bundle.main.bundleIdentifier!,
                                 category: String(describing: ServingRunList.self))
 
-    private let columnSpacing: CGFloat = 2
+    private let columnSpacing: CGFloat = 0
 
     private var columnPadding: EdgeInsets {
         EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
-        // EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5)
     }
 
     @FetchRequest private var servingRuns: FetchedResults<ZServingRun>
 
     private var gridItems: [GridItem] { [
-        GridItem(.flexible(minimum: 30), spacing: columnSpacing, alignment: .leading),
-        GridItem(.flexible(minimum: 60), spacing: columnSpacing, alignment: .leading),
-        GridItem(.flexible(minimum: 20), spacing: columnSpacing, alignment: .trailing),
+        GridItem(.flexible(minimum: 120), spacing: columnSpacing, alignment: .leading),
+        GridItem(.flexible(minimum: 20, maximum: 50), spacing: columnSpacing, alignment: .trailing),
     ] }
+
+    private static let nc = NumberCompactor(ifZero: nil)
 
     // MARK: - Views
 
     var body: some View {
         List {
-            header()
-                .listItemTint(.accentColor.opacity(0.5))
-
-            ForEach(servingRuns) { servingRun in
-                NavigationLink {
-                    VStack(spacing: 15) {
-                        Text(servingRun.displayConsumedTime)
-                        Text(servingRun.zServing?.wrappedName ?? "unknown")
-                        Text("\(servingRun.calories) cal")
-                    }
-                    .navigationTitle {
-                        NavTitle("Summary")
-                    }
-                } label: {
-                    listRow(element: servingRun)
+            ForEach(servingRuns) { element in
+                Button(action: { detailAction(element) }) {
+                    listRow(element: element)
                 }
             }
             .onDelete(perform: userRemoveAction)
-            .listItemTint(Color.accentColor.opacity(0.8))
+//            .listItemTint(Color.accentColor.opacity(0.8))
 
             Text("Total: \(totalCalories) cal")
-                .listItemTint(.accentColor.opacity(0.4))
+                .listItemTint(.accentColor.opacity(0.2))
         }
-    }
-
-    private func header() -> some View {
-        LazyVGrid(columns: gridItems, alignment: .leading) {
-            Text("Time")
-                .padding(columnPadding)
-            Text("Name")
-                .padding(columnPadding)
-            Text("Cals")
-        }
+        .listStyle(.plain)
     }
 
     @ViewBuilder
     private func listRow(element: ZServingRun) -> some View {
-        LazyVGrid(columns: gridItems, alignment: .leading) {
-            Text(element.displayConsumedTime)
-                .padding(columnPadding)
+        LazyVGrid(columns: gridItems, alignment: .leading, spacing: 0) {
             Text(element.zServing?.name ?? "")
-                .lineLimit(1)
-                .padding(columnPadding)
-            Text("\(element.calories)")
+                .lineLimit(3)
+                .foregroundStyle(servingColorDarkBg)
+            Text("\(Self.nc.string(from: element.calories as NSNumber) ?? "")")
         }
     }
 
@@ -132,6 +109,10 @@ struct ServingRunList: View {
     // MARK: - Properties
 
     // MARK: - Actions
+
+    private func detailAction(_ element: ZServingRun) {
+        router.path.append(.servingRunDetail(element.uriRepresentation))
+    }
 
     // NOTE: 'removes' matching records, where present, from both mainStore and archiveStore.
     private func userRemoveAction(at offsets: IndexSet) {
@@ -199,11 +180,11 @@ struct ServingRunList_Previews: PreviewProvider {
 
         let zc1 = ZCategory.create(ctx, categoryArchiveID: category1ArchiveID, categoryName: "Fruit", toStore: store)
         let zc2 = ZCategory.create(ctx, categoryArchiveID: category2ArchiveID, categoryName: "Meat", toStore: store)
-        let zs1 = ZServing.create(ctx, zCategory: zc1, servingArchiveID: serving1ArchiveID, servingName: "Banana", toStore: store)
-        let zs2 = ZServing.create(ctx, zCategory: zc2, servingArchiveID: serving2ArchiveID, servingName: "Steak", toStore: store)
+        let zs1 = ZServing.create(ctx, zCategory: zc1, servingArchiveID: serving1ArchiveID, servingName: "Banana and Peaches and Pears and whatnot", toStore: store)
+        let zs2 = ZServing.create(ctx, zCategory: zc2, servingArchiveID: serving2ArchiveID, servingName: "Steak and fritos and kiwis", toStore: store)
         let zdr = ZDayRun.create(ctx, consumedDay: consumedDay1, calories: 2433, toStore: store)
-        _ = ZServingRun.create(ctx, zDayRun: zdr, zServing: zs1, consumedTime: consumedTime1, calories: 120, toStore: store)
-        _ = ZServingRun.create(ctx, zDayRun: zdr, zServing: zs2, consumedTime: consumedTime1, calories: 450, toStore: store)
+        _ = ZServingRun.create(ctx, zDayRun: zdr, zServing: zs1, consumedTime: consumedTime1, calories: 2120, toStore: store)
+        _ = ZServingRun.create(ctx, zDayRun: zdr, zServing: zs2, consumedTime: consumedTime1, calories: 6450, toStore: store)
         try? ctx.save()
 
         return NavigationStack {

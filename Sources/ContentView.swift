@@ -41,10 +41,24 @@ struct ContentView: View {
             TodayDayRun()
                 .environmentObject(router)
                 .environment(\.managedObjectContext, viewContext)
+        case let .servingRunDetail(servingRunUri):
+            servingRunDetail(servingRunUri)
+                .environmentObject(router)
+                .environment(\.managedObjectContext, viewContext)
         default:
             DcaltDestination(route)
                 .environmentObject(router)
                 .environment(\.managedObjectContext, viewContext)
+        }
+    }
+
+    @ViewBuilder
+    private func servingRunDetail(_ servingRunUri: URL) -> some View {
+        if let zServingRun: ZServingRun = ZServingRun.get(viewContext, forURIRepresentation: servingRunUri)
+        {
+            ServingRunDetail(zServingRun: zServingRun)
+        } else {
+            Text("Serving Run Detail not available.")
         }
     }
 
