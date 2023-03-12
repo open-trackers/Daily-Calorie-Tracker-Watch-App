@@ -55,7 +55,7 @@ struct ServingRunDetail: View {
             }
         }
         .navigationTitle {
-            NavTitle("Serving")
+            Text("Serving")
         }
     }
 
