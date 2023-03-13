@@ -65,10 +65,9 @@ struct ServingRunDetail: View {
     }
 
     private var consumedDate: Date? {
-        guard let consumedDay = zServingRun.zDayRun?.consumedDay,
-              let consumedTime = zServingRun.consumedTime
-        else { return nil }
-        return mergeDateLocal(dateStr: consumedDay, timeStr: consumedTime)
+        guard let zDayRun = zServingRun.zDayRun,
+              let consumedTime = zServingRun.consumedTime else { return nil }
+        return zDayRun.consumedDate(consumedTime: consumedTime)
     }
 
     private var totalCalories: Int16 {
