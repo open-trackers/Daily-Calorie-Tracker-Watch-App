@@ -38,7 +38,7 @@ struct ContentView: View {
     private func destination(_ router: DcaltRouter, _ route: DcaltRoute) -> some View {
         switch route {
         case .dayRunToday:
-            TodayDayRun()
+            WatchTodayDayRun()
                 .environmentObject(router)
                 .environment(\.managedObjectContext, viewContext)
         case let .servingRunDetail(servingRunUri):
