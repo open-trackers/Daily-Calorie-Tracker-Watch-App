@@ -15,7 +15,7 @@ import DcaltLib
 import TrackerLib
 
 @main
-struct Daily_Calorie_Tracker_Watch_App: App {
+struct Watch_App: App {
     @Environment(\.scenePhase) var scenePhase
 
     // MARK: - Locals
