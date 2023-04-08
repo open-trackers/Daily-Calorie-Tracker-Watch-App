@@ -15,7 +15,7 @@ import Compactor
 import DcaltLib
 
 struct WidgetDCTEntryView: View {
-    var entry: Provider.Entry // not used
+    var entry: Provider.Entry
 
     static let tc = NumberCompactor(ifZero: "0", roundSmallToWhole: true)
 
@@ -33,24 +33,12 @@ struct WidgetDCTEntryView: View {
     }
 
     private var remaining: Int {
-        target - current // may be negative
-    }
-
-    private var current: Int {
-        userDefault(.currentCalories)
-    }
-
-    private var target: Int {
-        userDefault(.targetCalories)
-    }
-
-    private func userDefault(_ key: UserDefaults.Keys) -> Int {
-        UserDefaults.appGroup.integer(forKey: key.rawValue)
+        entry.targetCalories - entry.currentCalories // may be negative
     }
 
     private var percent: Float {
-        guard target > 0 else { return 0 }
-        return Float(current) / Float(target)
+        guard entry.targetCalories > 0 else { return 0 }
+        return Float(entry.currentCalories) / Float(entry.targetCalories)
     }
 }
 
@@ -79,26 +67,16 @@ struct Provider: TimelineProvider {
     }
 
     func getTimeline(in _: Context, completion: @escaping (Timeline<SimpleEntry>) -> Void) {
-        let currentDate = Date()
-        let entry = SimpleEntry(date: currentDate,
-                                targetCalories: UserDefaults.appGroup.integer(forKey: UserDefaults.Keys.targetCalories.rawValue),
-                                currentCalories: UserDefaults.appGroup.integer(forKey: UserDefaults.Keys.currentCalories.rawValue))
+        guard let entry = UserDefaults.appGroup.getSimpleEntry() else { return }
         let timeline = Timeline(entries: [entry], policy: .never)
         completion(timeline)
     }
 }
 
-//struct SimpleEntry: TimelineEntry {
-//    let date: Date
-//    let targetCalories: Int
-//    let currentCalories: Int
-//}
-//
 struct WidgetDCT_Previews: PreviewProvider {
     static var previews: some View {
-        UserDefaults.appGroup.set(2000, forKey: UserDefaults.Keys.targetCalories.rawValue)
-        UserDefaults.appGroup.set(500, forKey: UserDefaults.Keys.currentCalories.rawValue)
-        return WidgetDCTEntryView(entry: SimpleEntry(date: Date(), targetCalories: 2000, currentCalories: 500))
+        let entry = SimpleEntry(targetCalories: 2000, currentCalories: 500)
+        return WidgetDCTEntryView(entry: entry)
             .accentColor(.blue)
             .previewContext(WidgetPreviewContext(family: .accessoryCircular))
     }

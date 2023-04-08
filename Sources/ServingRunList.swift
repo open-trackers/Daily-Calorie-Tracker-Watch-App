@@ -162,8 +162,9 @@ struct ServingRunList: View {
             logger.error("\(#function): \(error.localizedDescription)")
         }
 
-        refreshWidget(currentCalories: calories)
-        refreshWidgetReload()
+        let targetCalories: Int16 = (try? AppSetting.getOrCreate(viewContext).targetCalories) ?? defaultTargetCalories
+
+        refreshWidget(targetCalories: targetCalories, currentCalories: calories, reload: true)
     }
 }
 
