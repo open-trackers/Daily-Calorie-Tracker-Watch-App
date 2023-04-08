@@ -17,6 +17,13 @@
 		409EF4B5298F3EB00050B99D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409EF4B4298F3EB00050B99D /* Preview Assets.xcassets */; };
 		40A39ED72990552300A31B8C /* Compactor in Frameworks */ = {isa = PBXBuildFile; productRef = 40A39ED62990552300A31B8C /* Compactor */; };
 		40B0364729901B04002A91B3 /* DcaltUI in Frameworks */ = {isa = PBXBuildFile; productRef = 40B0364629901B04002A91B3 /* DcaltUI */; };
+		40E12B5F29DE934F00D49A86 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E12B1A29DE8F2500D49A86 /* WidgetKit.framework */; };
+		40E12B6029DE934F00D49A86 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E12B1C29DE8F2500D49A86 /* SwiftUI.framework */; };
+		40E12B6329DE934F00D49A86 /* WidgetDCT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E12B6229DE934F00D49A86 /* WidgetDCT.swift */; };
+		40E12B6529DE934F00D49A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E12B6429DE934F00D49A86 /* Assets.xcassets */; };
+		40E12B6929DE934F00D49A86 /* WidgetDCTExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 40E12B5E29DE934F00D49A86 /* WidgetDCTExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		40E12B6E29DE935E00D49A86 /* DcaltUI in Frameworks */ = {isa = PBXBuildFile; productRef = 40E12B6D29DE935E00D49A86 /* DcaltUI */; };
+		40E12B9C29E0D3A600D49A86 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E12B9B29E0D3A600D49A86 /* AppGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +33,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 409EF4A7298F3EAF0050B99D;
 			remoteInfo = "Daily-Calorie-Tracker-Watch-App Watch App";
+		};
+		40E12B6729DE934F00D49A86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 409EF49C298F3EAF0050B99D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40E12B5D29DE934F00D49A86;
+			remoteInfo = WidgetDCTExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -39,6 +53,17 @@
 				409EF4A9298F3EAF0050B99D /* Daily Calorie Tracker.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40E12B2A29DE8F2600D49A86 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				40E12B6929DE934F00D49A86 /* WidgetDCTExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -55,6 +80,14 @@
 		409EF4AF298F3EAF0050B99D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		409EF4B1298F3EB00050B99D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		409EF4B4298F3EB00050B99D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		40E12B1A29DE8F2500D49A86 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		40E12B1C29DE8F2500D49A86 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		40E12B5E29DE934F00D49A86 /* WidgetDCTExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetDCTExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		40E12B6229DE934F00D49A86 /* WidgetDCT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDCT.swift; sourceTree = "<group>"; };
+		40E12B6429DE934F00D49A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40E12B6629DE934F00D49A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40E12B6F29DFD3B300D49A86 /* WidgetDCTExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetDCTExtension.entitlements; sourceTree = "<group>"; };
+		40E12B9B29E0D3A600D49A86 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		40F263BA29AFF04E00CAA9A2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		40F263BC29B0205500CAA9A2 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,12 +102,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		40E12B5B29DE934F00D49A86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40E12B6E29DE935E00D49A86 /* DcaltUI in Frameworks */,
+				40E12B6029DE934F00D49A86 /* SwiftUI.framework in Frameworks */,
+				40E12B5F29DE934F00D49A86 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		40098541298F544F008565F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				40E12B1A29DE8F2500D49A86 /* WidgetKit.framework */,
+				40E12B1C29DE8F2500D49A86 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -82,9 +127,11 @@
 		409EF49B298F3EAF0050B99D = {
 			isa = PBXGroup;
 			children = (
+				40E12B6F29DFD3B300D49A86 /* WidgetDCTExtension.entitlements */,
 				40F263BC29B0205500CAA9A2 /* LICENSE */,
 				40F263BA29AFF04E00CAA9A2 /* README.md */,
 				409EF4AC298F3EAF0050B99D /* Sources */,
+				40E12B6129DE934F00D49A86 /* WidgetDCT */,
 				409EF4A3298F3EAF0050B99D /* Products */,
 				40098541298F544F008565F3 /* Frameworks */,
 			);
@@ -95,6 +142,7 @@
 			children = (
 				409EF4A2298F3EAF0050B99D /* Daily Calorie Tracker Watch.app */,
 				409EF4A8298F3EAF0050B99D /* Daily Calorie Tracker.app */,
+				40E12B5E29DE934F00D49A86 /* WidgetDCTExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,6 +150,7 @@
 		409EF4AC298F3EAF0050B99D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				40E12B9B29E0D3A600D49A86 /* AppGroup.swift */,
 				409EF4AD298F3EAF0050B99D /* WatchApp.swift */,
 				409EF4AF298F3EAF0050B99D /* ContentView.swift */,
 				4037309929A8259900DB910E /* ServingRunList.swift */,
@@ -121,6 +170,16 @@
 				409EF4B4298F3EB00050B99D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		40E12B6129DE934F00D49A86 /* WidgetDCT */ = {
+			isa = PBXGroup;
+			children = (
+				40E12B6229DE934F00D49A86 /* WidgetDCT.swift */,
+				40E12B6429DE934F00D49A86 /* Assets.xcassets */,
+				40E12B6629DE934F00D49A86 /* Info.plist */,
+			);
+			path = WidgetDCT;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,10 +209,12 @@
 				409EF4A4298F3EAF0050B99D /* Sources */,
 				409EF4A5298F3EAF0050B99D /* Frameworks */,
 				409EF4A6298F3EAF0050B99D /* Resources */,
+				40E12B2A29DE8F2600D49A86 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				40E12B6829DE934F00D49A86 /* PBXTargetDependency */,
 			);
 			name = "Daily Calorie Tracker";
 			packageProductDependencies = (
@@ -164,6 +225,26 @@
 			productReference = 409EF4A8298F3EAF0050B99D /* Daily Calorie Tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
+		40E12B5D29DE934F00D49A86 /* WidgetDCTExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40E12B6A29DE934F00D49A86 /* Build configuration list for PBXNativeTarget "WidgetDCTExtension" */;
+			buildPhases = (
+				40E12B5A29DE934F00D49A86 /* Sources */,
+				40E12B5B29DE934F00D49A86 /* Frameworks */,
+				40E12B5C29DE934F00D49A86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WidgetDCTExtension;
+			packageProductDependencies = (
+				40E12B6D29DE935E00D49A86 /* DcaltUI */,
+			);
+			productName = WidgetDCTExtension;
+			productReference = 40E12B5E29DE934F00D49A86 /* WidgetDCTExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -171,14 +252,17 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					409EF4A1298F3EAF0050B99D = {
 						CreatedOnToolsVersion = 14.2;
 					};
 					409EF4A7298F3EAF0050B99D = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					40E12B5D29DE934F00D49A86 = {
+						CreatedOnToolsVersion = 14.3;
 					};
 				};
 			};
@@ -200,6 +284,7 @@
 			targets = (
 				409EF4A1298F3EAF0050B99D /* Daily Calorie Tracker Watch */,
 				409EF4A7298F3EAF0050B99D /* Daily Calorie Tracker */,
+				40E12B5D29DE934F00D49A86 /* WidgetDCTExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -221,6 +306,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		40E12B5C29DE934F00D49A86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40E12B6529DE934F00D49A86 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -229,10 +322,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				402CF94529BC33FB00129305 /* ServingRunDetail.swift in Sources */,
+				40E12B9C29E0D3A600D49A86 /* AppGroup.swift in Sources */,
 				409EF4B0298F3EAF0050B99D /* ContentView.swift in Sources */,
 				409EF4AE298F3EAF0050B99D /* WatchApp.swift in Sources */,
 				4037309A29A8259900DB910E /* ServingRunList.swift in Sources */,
 				40822B9E29C75FCF001C688D /* WatchTodayDayRun.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40E12B5A29DE934F00D49A86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40E12B6329DE934F00D49A86 /* WidgetDCT.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +345,11 @@
 			isa = PBXTargetDependency;
 			target = 409EF4A7298F3EAF0050B99D /* Daily Calorie Tracker */;
 			targetProxy = 409EF4AA298F3EAF0050B99D /* PBXContainerItemProxy */;
+		};
+		40E12B6829DE934F00D49A86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40E12B5D29DE934F00D49A86 /* WidgetDCTExtension */;
+			targetProxy = 40E12B6729DE934F00D49A86 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -280,6 +387,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -339,6 +447,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -361,11 +470,12 @@
 		409EF4B9298F3EB00050B99D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Sources/App.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "Sources/Preview\\ Content";
 				DEVELOPMENT_TEAM = J735QC5U38;
 				ENABLE_PREVIEWS = YES;
@@ -393,11 +503,12 @@
 		409EF4BA298F3EB00050B99D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Sources/App.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "Sources/Preview\\ Content";
 				DEVELOPMENT_TEAM = J735QC5U38;
 				ENABLE_PREVIEWS = YES;
@@ -456,6 +567,69 @@
 			};
 			name = Release;
 		};
+		40E12B6B29DE934F00D49A86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WidgetDCTExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J735QC5U38;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetDCT/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WidgetDCT;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openalloc.dcalt.watch.WidgetDCT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		40E12B6C29DE934F00D49A86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WidgetDCTExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J735QC5U38;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetDCT/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WidgetDCT;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openalloc.dcalt.watch.WidgetDCT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -486,6 +660,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		40E12B6A29DE934F00D49A86 /* Build configuration list for PBXNativeTarget "WidgetDCTExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40E12B6B29DE934F00D49A86 /* Debug */,
+				40E12B6C29DE934F00D49A86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -506,6 +689,10 @@
 			productName = Compactor;
 		};
 		40B0364629901B04002A91B3 /* DcaltUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DcaltUI;
+		};
+		40E12B6D29DE935E00D49A86 /* DcaltUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DcaltUI;
 		};

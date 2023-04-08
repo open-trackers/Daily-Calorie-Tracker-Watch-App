@@ -148,19 +148,22 @@ struct ServingRunList: View {
         logger.debug("\(#function):")
 
         // will need to update in both mainStore and mainStore
-        guard let dayrun = try? ZDayRun.get(viewContext, consumedDay: consumedDay, inStore: inStore)
+        guard let zdr = try? ZDayRun.get(viewContext, consumedDay: consumedDay, inStore: inStore)
         else {
             logger.notice("\(#function): Unable to find ZDayRun record to re-total its calories.")
             return
         }
 
-        dayrun.updateCalories()
+        let calories = zdr.refreshCalorieSum()
 
         do {
             try viewContext.save()
         } catch {
             logger.error("\(#function): \(error.localizedDescription)")
         }
+
+        refreshWidget(currentCalories: calories)
+        refreshWidgetReload()
     }
 }
 
