@@ -88,12 +88,12 @@ struct Provider: TimelineProvider {
     }
 }
 
-struct SimpleEntry: TimelineEntry {
-    let date: Date
-    let targetCalories: Int
-    let currentCalories: Int
-}
-
+//struct SimpleEntry: TimelineEntry {
+//    let date: Date
+//    let targetCalories: Int
+//    let currentCalories: Int
+//}
+//
 struct WidgetDCT_Previews: PreviewProvider {
     static var previews: some View {
         UserDefaults.appGroup.set(2000, forKey: UserDefaults.Keys.targetCalories.rawValue)
