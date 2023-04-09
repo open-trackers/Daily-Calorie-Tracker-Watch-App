@@ -11,7 +11,6 @@
 import SwiftUI
 import WidgetKit
 
-import Compactor
 import DcaltLib
 import DcaltUI
 
