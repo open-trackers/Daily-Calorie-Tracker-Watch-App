@@ -129,42 +129,18 @@ struct ServingRunList: View {
             }
 
             // re-total the calories in both stores (may no longer be present in main)
-            if let consumedDay = zDayRun.consumedDay,
-               let mainStore = manager.getMainStore(viewContext)
-            {
-                refreshTotalCalories(consumedDay: consumedDay, inStore: mainStore)
+            if let mainStore = manager.getMainStore(viewContext) {
+                // NOTE: this (re-)sums the day's total calories, as well as update the widget
+                WidgetEntry.refresh(viewContext,
+                                    inStore: mainStore,
+                                    reload: true,
+                                    defaultColor: .accentColor)
             }
 
             try viewContext.save()
         } catch {
             logger.error("\(#function): \(error.localizedDescription)")
         }
-    }
-
-    // MARK: - Helpers
-
-    // Re-total the calories for the ZDayRun record, if present in specified store.
-    private func refreshTotalCalories(consumedDay: String, inStore: NSPersistentStore) {
-        logger.debug("\(#function):")
-
-        // will need to update in both mainStore and mainStore
-        guard let zdr = try? ZDayRun.get(viewContext, consumedDay: consumedDay, inStore: inStore)
-        else {
-            logger.notice("\(#function): Unable to find ZDayRun record to re-total its calories.")
-            return
-        }
-
-        let calories = zdr.refreshCalorieSum()
-
-        do {
-            try viewContext.save()
-        } catch {
-            logger.error("\(#function): \(error.localizedDescription)")
-        }
-
-        let targetCalories: Int16 = (try? AppSetting.getOrCreate(viewContext).targetCalories) ?? defaultTargetCalories
-
-        refreshWidget(targetCalories: targetCalories, currentCalories: calories, reload: true)
     }
 }
 
