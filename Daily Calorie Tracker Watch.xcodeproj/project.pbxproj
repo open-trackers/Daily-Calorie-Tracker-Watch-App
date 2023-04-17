@@ -23,7 +23,6 @@
 		40E12B6529DE934F00D49A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E12B6429DE934F00D49A86 /* Assets.xcassets */; };
 		40E12B6929DE934F00D49A86 /* WidgetDCTExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 40E12B5E29DE934F00D49A86 /* WidgetDCTExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		40E12B6E29DE935E00D49A86 /* DcaltUI in Frameworks */ = {isa = PBXBuildFile; productRef = 40E12B6D29DE935E00D49A86 /* DcaltUI */; };
-		40E12B9C29E0D3A600D49A86 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E12B9B29E0D3A600D49A86 /* AppGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +86,6 @@
 		40E12B6429DE934F00D49A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40E12B6629DE934F00D49A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40E12B6F29DFD3B300D49A86 /* WidgetDCTExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetDCTExtension.entitlements; sourceTree = "<group>"; };
-		40E12B9B29E0D3A600D49A86 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		40F263BA29AFF04E00CAA9A2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		40F263BC29B0205500CAA9A2 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,7 +148,6 @@
 		409EF4AC298F3EAF0050B99D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				40E12B9B29E0D3A600D49A86 /* AppGroup.swift */,
 				409EF4AD298F3EAF0050B99D /* WatchApp.swift */,
 				409EF4AF298F3EAF0050B99D /* ContentView.swift */,
 				4037309929A8259900DB910E /* ServingRunList.swift */,
@@ -322,7 +319,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				402CF94529BC33FB00129305 /* ServingRunDetail.swift in Sources */,
-				40E12B9C29E0D3A600D49A86 /* AppGroup.swift in Sources */,
 				409EF4B0298F3EAF0050B99D /* ContentView.swift in Sources */,
 				409EF4AE298F3EAF0050B99D /* WatchApp.swift in Sources */,
 				4037309A29A8259900DB910E /* ServingRunList.swift in Sources */,
