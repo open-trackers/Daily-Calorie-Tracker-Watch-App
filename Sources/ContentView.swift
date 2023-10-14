@@ -54,8 +54,7 @@ struct ContentView: View {
 
     @ViewBuilder
     private func servingRunDetail(_ servingRunUri: URL) -> some View {
-        if let zServingRun: ZServingRun = ZServingRun.get(viewContext, forURIRepresentation: servingRunUri)
-        {
+        if let zServingRun: ZServingRun = ZServingRun.get(viewContext, forURIRepresentation: servingRunUri) {
             ServingRunDetail(zServingRun: zServingRun)
         } else {
             Text("Serving Run Detail not available.")
